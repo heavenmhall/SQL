@@ -1,0 +1,30 @@
+--create a client database--
+
+CREATE TABLE clients (id INTEGER PRIMARY KEY, name TEXT, location TEXT, region TEXT, monthly_orders INTEGER); 
+
+INSERT INTO clients VALUES (1, "Crumbl", "Salt_Lake_City", "Western", 5);
+INSERT INTO clients VALUES (2, "Chip", "Los_Angeles", "Western", 17);
+INSERT INTO clients VALUES (3, "Crave", "Memphis", "Southeastern", 24);
+INSERT INTO clients VALUES (4, "Misses_Kisses", "Tampa", "Southeastern", 12);
+INSERT INTO clients VALUES (5, "Gorgina_Cookies", "Oakland", "Western", 34);
+INSERT INTO clients VALUES (6, "Massive_Chunk", "Milwaukee", "Midwestern", 10);
+INSERT INTO clients VALUES (7, "Salt_N_Sprinkles", "New_Jersey", "Northeastern", 9);
+INSERT INTO clients VALUES (8, "Doughlicious", "Columbus", "Midwestern", 20);
+INSERT INTO clients VALUES (9, "Lehi_Cookie_Co", "Lehi", "Western", 15);
+INSERT INTO clients VALUES (10, "Cookie_Company", "Orlando", "Southeastern", 31);
+
+--display database ordered by monthly orders--
+SELECT * FRROM clients
+ORDER BY monthly_orders DESC;
+
+
+--what is the average order from a client?--
+SELECT AVG(monthly_orders)
+FROM clients; 
+
+--what 5 clients order the most per month?--
+SELECT name, monthly_orders 
+FROM clients
+ORDER BY monthly_orders DESC;
+LIMIT 5;
+
