@@ -5,7 +5,7 @@ SELECT *
 FROM BIT_DB.JanSales
 WHERE length(orderid) = 6
 AND orderid <> 'Order ID';
-![](Screenshot 2023-06-11 at 12.43.02 PM)
+
 
 #2. How many of those orders were for an iPhone? 
 SELECT * 
