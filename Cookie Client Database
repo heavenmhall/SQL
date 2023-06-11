@@ -25,6 +25,6 @@ FROM clients;
 --what 5 clients order the most per month?--
 SELECT name, monthly_orders 
 FROM clients
-ORDER BY monthly_orders DESC;
+ORDER BY monthly_orders DESC
 LIMIT 5;
 
