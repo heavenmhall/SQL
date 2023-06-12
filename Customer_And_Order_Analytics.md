@@ -33,6 +33,7 @@ SELECT product, price
 FROM BIT_DB.JanSales
 ORDER BY price ASC LIMIT 5;
 ```
+<img width="305" alt="answer for numba 4" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/0411438e-59e8-4d45-945d-3a73156c799a">
 
 #5. What is the total revenue for each product sold in January?
 ```sql
