@@ -77,6 +77,7 @@ AND orderid <> 'Order ID'
 GROUP BY location
 HAVING count(orderID)>2;
 ```
+<img width="431" alt="poop" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/cb81eb5f-7f3b-4b3d-9e61-195123692bda">
 
 #9. How many of each type of headphone were sold in February?
 ```sql
