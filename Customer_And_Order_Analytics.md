@@ -35,6 +35,7 @@ ORDER BY price ASC LIMIT 5;
 ```
 <img width="305" alt="answer for numba 4" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/0411438e-59e8-4d45-945d-3a73156c799a">
 
+
 #5. What is the total revenue for each product sold in January?
 ```sql
 SELECT sum(quantity)*price as revenue
@@ -63,6 +64,8 @@ WHERE Feb.Quantity > 2
 AND length(orderid) = 6
 AND orderid <> 'Order ID';
 ```
+<img width="378" alt="answer for q 7" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/50054e25-87f2-4f7b-9c7d-3d432fc27f1c">
+
 
 #8. Which locations in New York received at least 3 orders in January, and how many orders did they each receive?
 ```sql
