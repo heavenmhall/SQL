@@ -1,10 +1,12 @@
 In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
 
 #1. How many orders were placed in January?
+```sql
 SELECT * 
 FROM BIT_DB.JanSales
 WHERE length(orderid) = 6
 AND orderid <> 'Order ID';
+```
 
 
 #2. How many of those orders were for an iPhone? 
