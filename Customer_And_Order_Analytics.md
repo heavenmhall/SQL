@@ -1,6 +1,6 @@
-### In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
+## In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
 
-## 1. How many orders were placed in January?
+### 1. How many orders were placed in January?
 ```sql
 SELECT * 
 FROM BIT_DB.JanSales
@@ -9,7 +9,7 @@ AND orderid <> 'Order ID';
 ```
 
 
-## 2. How many of those orders were for an iPhone? 
+### 2. How many of those orders were for an iPhone? 
 ```sql
 SELECT * 
 FROM BIT_DB.JanSales
@@ -17,7 +17,7 @@ WHERE product = "iPhone"
 AND length(orderid) = 6;
 ```
 
-## 3. Select the customer accouint numbers for all of the orders that were placed in February.
+### 3. Select the customer accouint numbers for all of the orders that were placed in February.
 ```sql
 SELECT distinct acctnum
 FROM BIT_DB.customers cust
@@ -27,7 +27,7 @@ WHERE length(orderid) = 6
 AND orderid <> 'Order ID';
 ```
 
-## 4. Which prodcut was the cheapest one sold in January, and what was the price?
+### 4. Which prodcut was the cheapest one sold in January, and what was the price?
 ```sql
 SELECT product, price
 FROM BIT_DB.JanSales
@@ -36,7 +36,7 @@ ORDER BY price ASC LIMIT 5;
 <img width="305" alt="answer for numba 4" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/0411438e-59e8-4d45-945d-3a73156c799a">
 
 
-## 5. What is the total revenue for each product sold in January?
+### 5. What is the total revenue for each product sold in January?
 ```sql
 SELECT sum(quantity)*price as revenue
 , product
@@ -44,7 +44,7 @@ FROM BIT_DB.JanSales
 GROUP BY product;
 ```
 
-## 6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue? 
+### 6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue? 
 ```sql
 SELECT sum(quantity), product,
 sum(quantity)*price as revenue 
@@ -53,7 +53,7 @@ WHERE location = "548 Lincoln St, Seattle, WA 98101";
 GROUP BY product;
 ```
 
-## 7. How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers? 
+### 7. How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers? 
 ```sql
 SELECT count(distinct cust.acctnum),
 avg(quantity*price)
@@ -67,7 +67,7 @@ AND orderid <> 'Order ID';
 <img width="378" alt="answer for q 7" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/50054e25-87f2-4f7b-9c7d-3d432fc27f1c">
 
 
-## 8. Which locations in New York received at least 3 orders in January, and how many orders did they each receive?
+### 8. Which locations in New York received at least 3 orders in January, and how many orders did they each receive?
 ```sql
 SELECT distinct location, count(orderID)
 FROM BIT_DB.JanSales
@@ -79,7 +79,7 @@ HAVING count(orderID)>2;
 ```
 <img width="431" alt="poop" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/cb81eb5f-7f3b-4b3d-9e61-195123692bda">
 
-## 9. How many of each type of headphone were sold in February?
+### 9. How many of each type of headphone were sold in February?
 ```sql
 SELECT sum(Quantity) as quantity, Product
 FROM BIT_DB.FebSales
@@ -87,7 +87,7 @@ WHERE Product like '%Headphones%'
 GROUP BY Product;
 ```
 
-## 10. What was the average amount spent per account in February? 
+### 10. What was the average amount spent per account in February? 
 ```sql
 SELECT avg(quantity*price)
 FROM BIT_DB.FebSales Feb
@@ -97,7 +97,7 @@ WHERE length(orderid) = 6
 AND orderid <> 'Order ID';
 ```
 
-## 11. What was the average quantity of products purchased per account in February?
+### 11. What was the average quantity of products purchased per account in February?
 ```sql
 SELECT sum(quantity)/count(cust.acctnum)
 FROM BIT_DB.FebSales Feb
@@ -107,7 +107,7 @@ WHERE length(orderid) = 6
 AND orderid <> 'Order ID';
 ```
 
-## 12. Which product brought in the most revenue in January and how much revenue did it bring in total?
+### 12. Which product brought in the most revenue in January and how much revenue did it bring in total?
 ```sql
 SELECT product, sum(quantity*price)
 FROM BIT_DB.JanSales
