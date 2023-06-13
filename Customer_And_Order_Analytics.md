@@ -20,7 +20,7 @@ AND length(orderid) = 6;
 <img width="161" alt="Screenshot 2023-06-12 at 9 04 36 PM" src="https://github.com/heavenmhall/SQL-Portfolio/assets/136202944/18a27afb-9b0a-4d2e-a8f7-4799756419ba">
 
 
-### 3. Select the customer accouint numbers for all of the orders that were placed in February.
+### 3. Select the customer account numbers for all of the orders that were placed in February.
 ```sql
 SELECT distinct acctnum
 FROM BIT_DB.customers cust
